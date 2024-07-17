@@ -5,12 +5,12 @@ This project is a technical challenge involving fetching and displaying country 
 ## Technologies Used
 
 - **Frontend Framework:** React
-- **State Management and API Fetching:** React Query
+- **State Management and API Fetching:** TanStack Query
 - **Routing:** React Router
-- **Testing Libraries:** React Testing Library, JSDOM, testing-library/jest-dom
+- **Testing Libraries:** React Testing Library, JSDOM, testing library jest-dom
 - **Build Tool:** Vite
 - **CSS Framework:** Tailwind CSS
-- **Unit Testing:** Jest
+- **Unit Testing:** Vitest
 
 ## Features Implemented
 
