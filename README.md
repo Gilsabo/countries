@@ -1,6 +1,6 @@
 # Countries Information App
 
-This project is a technical challenge involving fetching and displaying country data from the REST Countries API. The application allows users to view countries, search for specific countries, filter by region, and view detailed information about each country on a separate page. It also features responsive design and hover effects on interactive elements.
+This project is a technical challenge for the Barcelona Activa IT Academy involving fetching and displaying country data from the REST Countries API. The application allows users to view countries, search for specific countries, filter by region, and view detailed information about each country on a separate page. It also features responsive design and hover effects on interactive elements.
 
 ## Technologies Used
 
@@ -29,7 +29,7 @@ To run this project locally, follow these steps:
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone [<repository-url>](https://github.com/Gilsabo/countries)
    cd countries-information-app
 
 2. **Install dependencies:**
