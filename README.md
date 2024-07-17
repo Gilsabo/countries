@@ -38,10 +38,14 @@ To run this project locally, follow these steps:
    npm install
    
 3. **Run the development server:**
- ```bash
+   
+   ```bash
    npm run dev
-
+   
 4. **Run unit tests:**
-  ```bash
-   npm run test
+
+ ```bash
+ npm run test
+
+
 
