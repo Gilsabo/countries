@@ -44,8 +44,8 @@ To run this project locally, follow these steps:
    
 4. **Run unit tests:**
 
- ```bash
- npm run test
+   ```bash
+   npm run test
 
 
 
