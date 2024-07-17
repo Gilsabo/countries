@@ -11,6 +11,7 @@ This project is a technical challenge for the Barcelona Activa IT Academy involv
 - **Build Tool:** Vite
 - **CSS Framework:** Tailwind CSS
 - **Unit Testing:** Vitest
+- **Deploy:** Netlify
 
 ## Features Implemented
 
