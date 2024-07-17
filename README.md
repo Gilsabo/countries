@@ -31,3 +31,17 @@ To run this project locally, follow these steps:
    ```bash
    git clone <repository-url>
    cd countries-information-app
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   
+3. **Run the development server:**
+ ```bash
+   npm run dev
+
+4. **Run unit tests:**
+  ```bash
+   npm run test
+
