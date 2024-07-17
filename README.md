@@ -47,3 +47,19 @@ To run this project locally, follow these steps:
    ```bash
    npm run test
 
+## Unit Tests
+
+The unit tests cover the following aspects:
+
+- Rendering of main components to ensure correct display.
+- Validation of search and filtering logic for countries.
+- Verification of proper handling and visualization of data fetched from the API.
+
+## Optional Features and future plans
+
+- Dark mode: Although not implemented in this version, the application could optionally support a dark mode feature.
+- Refactoring
+- Better error handling
+- Extend testing for edge cases
+- More appealing design
+- Enhance the accessibility features of this application to ensure it can be used effectively by all users, including those with disabilities.
