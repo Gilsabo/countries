@@ -5,7 +5,7 @@ This project is a technical challenge for the Barcelona Activa IT Academy involv
 ## Technologies Used
 
 - **Frontend Framework:** React
-- **State Management and API Fetching:** TanStack Query
+- **API Fetching:** TanStack Query
 - **Routing:** React Router
 - **Testing Libraries:** React Testing Library, JSDOM, testing library jest-dom
 - **Build Tool:** Vite
