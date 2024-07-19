@@ -25,7 +25,9 @@ const CountryDetail = () => {
   return (
     <div className="flex flex-col items-center mt-6">
       <h2 className="text-7xl">
-        <span className="text-amber-800 ">{country.name.common}</span>
+        <span className="text-amber-800 flex text-center">
+          {country.name.common}
+        </span>
       </h2>
       <p className="mt-8 mb-6 text-slate-700">
         <span className=" text-gray-400">Capital:</span> {country.capital}
