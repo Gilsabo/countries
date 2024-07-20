@@ -1,6 +1,6 @@
 # Countries Information App
 
-This project is a technical challenge for the Barcelona Activa IT Academy involving fetching and displaying country data from the REST Countries API. The application allows users to view countries, search for specific countries, filter by region, and view detailed information about each country on a separate page. It also features responsive design and hover effects on interactive elements.
+This project is a technical challenge for the Barcelona Activa IT Academy involving fetching and displaying country data from the [REST Countries API](https://restcountries.com/). The application allows users to view countries, search for specific countries, filter by region, and view detailed information about each country on a separate page. It also features responsive design and hover effects on interactive elements.
 
 ## Technologies Used
 
