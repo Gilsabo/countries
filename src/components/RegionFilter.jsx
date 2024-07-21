@@ -1,5 +1,3 @@
-import React from 'react';
-
 export const RegionFilter = ({ region, setRegion }) => {
   const regions = [
     'Africa',
