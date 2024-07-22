@@ -7,6 +7,7 @@ import { SearchInput } from './SearchInput';
 export default function CountryList() {
   const [searchQuery, setSearchQuery] = useState('');
   const [region, setRegion] = useState('');
+  const [isAlphabetical, setIsAlphabetical] = useState(false);
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['CountriesInfo', region],
@@ -23,30 +24,43 @@ export default function CountryList() {
 
   useEffect(() => {
     if (data) {
-      const filtered = data.filter((country) =>
+      let filtered = data.filter((country) =>
         country.name.common.toLowerCase().includes(searchQuery.toLowerCase()),
       );
+
+      if (isAlphabetical) {
+        filtered = filtered.sort((a, b) =>
+          a.name.common.localeCompare(b.name.common),
+        );
+      }
+
       setFilteredCountries(filtered);
     }
-  }, [data, searchQuery]);
+  }, [data, searchQuery, isAlphabetical]);
 
   if (isLoading)
     return <div className="flex justify-center mt-6">Loading...</div>;
   if (error)
     return (
-      <div className="flex justify-center mt-6">An error has occurred: </div> +
-      error.message
+      <div className="flex justify-center mt-6">
+        An error has occurred: {error.message}
+      </div>
     );
 
   return (
     <>
-      <div className="sm:flex sm:justify-center mt-6 items-center ">
+      <div className="sm:flex sm:justify-center mt-6 items-center">
         <SearchInput
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
         />
-
-        <RegionFilter className="ml-2 " region={region} setRegion={setRegion} />
+        <RegionFilter className="ml-2" region={region} setRegion={setRegion} />
+        <button
+          onClick={() => setIsAlphabetical(!isAlphabetical)}
+          className="ml-2 p-2 bg-blue-500 text-white rounded"
+        >
+          {isAlphabetical ? 'Sort by Default' : 'Sort Alphabetically'}
+        </button>
       </div>
       <ul className="flex justify-center mt-6 flex-row flex-wrap">
         {filteredCountries.length > 0 ? (
