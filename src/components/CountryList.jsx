@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { getCountries } from '../utils/apis';
 import { RegionFilter } from './RegionFilter';
 import { SearchInput } from './SearchInput';
 
@@ -11,13 +12,7 @@ export default function CountryList() {
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['CountriesInfo', region],
-    queryFn: () => {
-      let url = 'https://restcountries.com/v3.1/all?fields=name,flags,cca3';
-      if (region) {
-        url = `https://restcountries.com/v3.1/region/${region}?fields=name,flags,cca3`;
-      }
-      return fetch(url).then((res) => res.json());
-    },
+    queryFn: () => getCountries(region),
   });
 
   const [filteredCountries, setFilteredCountries] = useState([]);
