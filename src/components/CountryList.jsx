@@ -77,7 +77,7 @@ export default function CountryList() {
             </div>
           ))
         ) : (
-          <div className="text-center mt-4">No countries found</div>
+          <div className="text-center mt-4">Information no available</div>
         )}
       </ul>
     </>
