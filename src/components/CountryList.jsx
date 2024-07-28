@@ -52,7 +52,7 @@ export default function CountryList() {
         <RegionFilter className="ml-2" region={region} setRegion={setRegion} />
         <button
           onClick={() => setIsAlphabetical(!isAlphabetical)}
-          className="ml-2 p-2 bg-blue-500 text-white rounded"
+          className="ml-2 p-2 hover:bg-blue-500 hover:text-white rounded text-blue-500 border border-blue-500"
         >
           {isAlphabetical ? 'Sort by Default' : 'Sort Alphabetically'}
         </button>
