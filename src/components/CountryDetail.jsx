@@ -1,20 +1,31 @@
 import { useQuery } from '@tanstack/react-query';
 import { useParams } from 'react-router-dom';
+import Error from './Error';
 
 const CountryDetail = () => {
   const { cca3 } = useParams();
 
   const { isLoading, error, data } = useQuery({
     queryKey: ['CountryDetail', cca3],
-    queryFn: () =>
-      fetch(`https://restcountries.com/v3.1/alpha/${cca3}`).then((res) =>
-        res.json(),
-      ),
+    queryFn: async () => {
+      const response = await fetch(
+        `https://restcountries.com/v3.1/alpha/${cca3}`,
+      );
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const result = await response.json();
+      if (result.status === 404 || !result.length) {
+        throw new Error('Country not found');
+      }
+      return result;
+    },
   });
 
   if (isLoading) {
     return <div className="flex justify-center mt-6">Loading...</div>;
   }
+
   if (error) {
     return (
       <div className="flex justify-center mt-6">
@@ -25,7 +36,11 @@ const CountryDetail = () => {
 
   const country = data[0];
 
-  return country !== null ? (
+  if (!country) {
+    return <Error />;
+  }
+
+  return (
     <div className="flex flex-col items-center mt-6">
       <h2 className="text-7xl">
         <span className="text-amber-800 flex text-center">
@@ -70,8 +85,6 @@ const CountryDetail = () => {
         )}
       </div>
     </div>
-  ) : (
-    <div>No information available</div>
   );
 };
 
