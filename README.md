@@ -64,3 +64,19 @@ The unit tests cover the following aspects:
 - Extend testing for edge cases
 - More appealing design
 - Enhance the accessibility features of this application to ensure it can be used effectively by all users, including those with disabilities.
+- Population Range Filter: Provide a slider or input fields to filter countries by population size
+- Area Range Filter: Similar to the population filter, allow users to filter countries by their area in square kilometers
+- Currency and Language Filter: Let users search for countries by their official currency or spoken languages
+- Sorting Options: In addition to alphabetical sorting, add sorting options by population size, area, and population density
+- Interactive Maps: Integrate a map API (such as Google Maps or Leaflet) to show the location of each country. You can highlight the country on the map when it is selected
+- Country Comparison Tool: Enable users to compare two or more countries side by side in terms of population, area, GDP, etc
+- Favorite Countries: Allow users to mark and save their favorite countries for easy access later
+- Historical Data and Trends: If available, provide historical data and trends for metrics such as population growth or economic indicators
+- Graphical Representations: Use charts and graphs to represent data like population distribution, GDP, and other statistics
+- Climate Information: Include weather and climate data for each country, such as average temperatures, rainfall, and other relevant metrics
+- Embassy and Diplomatic Information: Provide information on embassies and consulates, especially useful for travelers
+- Travel Advisory and Safety Information: Incorporate current travel advisories and safety information for each country
+- Localization and Multilingual Support: Offer your app in multiple languages to reach a broader audience
+- Dark Mode: Add a dark mode for a better user experience, especially for those who use the app at night
+- Accessibility Features: Ensure your app is accessible to users with disabilities by following accessibility guidelines and providing features like text-to-speech
+- Offline Mode: Allow users to download country data for offline access
