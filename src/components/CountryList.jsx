@@ -60,21 +60,21 @@ export default function CountryList() {
       <ul className="flex justify-center mt-6 flex-row flex-wrap">
         {filteredCountries.length > 0 ? (
           filteredCountries.map((country) => (
-            <div
+            <Link
+              to={`${country.cca3.toLowerCase()}`}
               className="flex m-4 items-center hover:bg-slate-200 rounded p-6 hover:transition duration-700 hover:ease-in"
               key={country.cca3}
             >
               <li>{country.name.common}</li>
-              <Link to={`${country.cca3.toLowerCase()}`}>
-                <li>
-                  <img
-                    className="rounded-md w-10 ml-3 hover:transition duration-700 hover:ease-in hover:w-12"
-                    src={country.flags.svg}
-                    alt={`Flag of ${country.name.common}`}
-                  />
-                </li>
-              </Link>
-            </div>
+
+              <li>
+                <img
+                  className="rounded-md w-10 ml-3 hover:transition duration-700 hover:ease-in hover:w-12"
+                  src={country.flags.svg}
+                  alt={`Flag of ${country.name.common}`}
+                />
+              </li>
+            </Link>
           ))
         ) : (
           <div className="text-center mt-4">Information no available</div>
